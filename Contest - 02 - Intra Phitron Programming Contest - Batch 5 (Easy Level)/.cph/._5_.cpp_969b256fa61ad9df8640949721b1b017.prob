@@ -1,0 +1,1 @@
+{"name":"Local: _5_","url":"e:\\Contest\\Contest - 02(Easy level)\\_5_.cpp","tests":[{"id":1717773303210,"input":"3\nabcbca 2\nabxaba 3\nxyzya 23","output":"YES\nNO\nYES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Contest\\Contest - 02(Easy level)\\_5_.cpp","group":"local","local":true}
