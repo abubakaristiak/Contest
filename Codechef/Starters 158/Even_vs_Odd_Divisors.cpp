@@ -21,6 +21,7 @@ int main()
                 }
             }
         }
+        
         if(evenCnt > oddCnt) cout << 1 << endl;
         else if(evenCnt == oddCnt) cout << 0 << endl;
         else cout << -1 << endl;
