@@ -2,8 +2,8 @@
  * Bismillahir Rahmanir Raheem
  *
  * * * * Coder   : abubakaristiak
- * * * * Created : 2025-01-22 || 21:39:38
- * * * * File    : Monster_Monster.cpp
+ * * * * Created : 2025-01-23 || 23:06:55
+ * * * * File    : qUiRkY_qUesTs_Easy.cpp
  */
 
 
@@ -24,23 +24,25 @@ using namespace std;
 
 void solve()
 {
-    ll n,x; cin >> n >> x;
-    vector<ll> v(n);
-    for(int i=0; i<n; i++){
+    ll n; cin >> n;
+    vector<ll> v(n+1);
+    for(ll i=1; i<=n; i++){
         cin >> v[i];
     }
-
-    sort(v.rbegin(), v.rend());
-    ll sum=0, ans=v[0];
-    for(int i=1; i<n; i++){
-        sum+=x;
-        ll cur=v[i]+sum;
-        ans=max(ans, cur);
+    sort(v.begin(), v.end());
+    ll sum=0;
+    for(ll i=1; i<=n; i++){
+        sum+=v[i];
     }
-
+    ll ans=sum;
+    for(ll i=1; i<=n; i++){
+        sum-=v[i];
+        ans=max(ans, sum+(i*i));
+    }
     cout << ans << endl;
-
 }
+
+
 int main()
 {
     fast();
