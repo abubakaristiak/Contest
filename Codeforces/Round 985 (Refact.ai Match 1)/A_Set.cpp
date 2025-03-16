@@ -1,87 +1,55 @@
 /*
  * Bismillahir Rahmanir Raheem
  *
- * * * * User    : abubakaristiak
- * * * * Created : 2024-11-09 || 22:44:40
+ * * * * Coder   : abubakaristiak
+ * * * * Created : 2025-03-16 || 20:10:01
  * * * * File    : A_Set.cpp
- */
+*/
 
-// https://codeforces.com/contest/2029/problem/A
+// Upsolve
+// https://codeforces.com/problemset/problem/2029/A
+
 
 #include<bits/stdc++.h>
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
 #define ll long long
 #define pi pair<ll, ll>
 #define asort(v) sort(v.begin(), v.end())
 #define rsort(v) sort(v.begin(), v.end(), greater<>())
 #define yes cout << "YES\n"
 #define no cout << "NO\n"
+#define cyes cout << "Yes\n"
+#define cno cout << "No\n"
 #define endl "\n"
 #define fast() ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)
-
+using namespace __gnu_pbds;
 using namespace std;
-int main()
+
+template <typename T> using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+
+
+void solve()
 {
-    fast();
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        ll l,r,k; cin >> l >> r >> k;
-        ll a1=l , a2=r; ll res=0LL;
-
-        while (a1<=a2) {
-            ll mid=a1+(a2-a1)/2;
-
-            ll a3=mid*k;
-
-            if (a3<=r) {
-                a1=mid + 1;
-                res = max(res,mid-l+1);
-            }
-            else a2=mid-1;
-        }
-        cout << res << endl;
+    ll l,r,k; cin >> l >> r >> k;
+    if((r/k)<l){
+        cout << 0 << endl;
+    }else{
+        cout << (r/k)-l+1 << endl;
     }
-    return 0;
 }
 
 
+int main()
+{
+    fast();
+    int t; cin >> t;
+    while (t--) {
+        solve();
+    }
+
+    return 0;
 
 
-
-
-
-
-
-
-
-
-// #include<bits/stdc++.h>
-// #define ll long long
-// #define pi pair<ll, ll>
-// #define asort(v) sort(v.begin(), v.end())
-// #define rsort(v) sort(v.begin(), v.end(), greater<>())
-// #define yes cout << "YES\n"
-// #define no cout << "NO\n"
-// #define endl "\n"
-// #define fast() ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)
-
-// using namespace std;
-// int main()
-// {
-//     fast();
-//     int t; cin >> t;
-//     while (t--)
-//     {
-//         int l,r,k; cin >> l >> r >> k;
-    
-//         int cnt=0;
-//         for(int i=l; i<=r; i++){
-//             int mul=(r / i) - ((l - 1) / i);
-//             if(mul>=k) cnt++;
-//         }
-//         cout << cnt << endl;
-//     }
-    
-//     return 0;
-// }
+// Alhamdulillah---(Ramadan Kareem)
+}
