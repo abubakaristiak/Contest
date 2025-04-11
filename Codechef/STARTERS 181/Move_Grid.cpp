@@ -1,10 +1,9 @@
-// Upsolved:
 /*
  * Bismillahir Rahmanir Raheem
  *
  * * * * Coder   : abubakaristiak
- * * * * Created : 2025-04-11 || 23:42:16
- * * * * File    : Find_Outside_Array.cpp
+ * * * * Created : 2025-04-11 || 23:44:23
+ * * * * File    : Move_Grid.cpp
 */
 
 
@@ -29,7 +28,8 @@ template <typename T> using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree
 
 void solve()
 {
-    
+    int a,b,c,d; cin >> a >> b >> c >> d;
+    cout << a-c << " " << b-d << endl;
 }
 
 
