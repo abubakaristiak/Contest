@@ -3,8 +3,8 @@
  * Bismillahir Rahmanir Raheem
  *
  * * * * Coder   : abubakaristiak
- * * * * Created : 2025-04-11 || 10:15:01
- * * * * File    : A_Piecing_It_Together.cpp
+ * * * * Created : 2025-04-11 || 10:44:50
+ * * * * File    : D_Where_Am_I.cpp
 */
 
 
@@ -29,7 +29,7 @@ template <typename T> using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree
 
 void solve()
 {
-    cout << "puzzling" << endl;
+    cout << "36.104300" << " " << "-115.172835" << endl;
 }
 
 
