@@ -29,14 +29,31 @@ template <typename T> using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree
 
 void solve()
 {
-    
+    int n; cin >> n; 
+    vector<int> v(n);
+    bool pos=false, neg=false;
+    for(int i=0; i<n; i++){
+        cin >> v[i];
+        if(v[i]>0){
+            pos=true;
+        }
+        if(v[i]<0){
+            neg=true;
+        }
+    }
+    asort(v);
+    if(pos){
+        cout << v[n-1] << " " << v[n-1] << endl;
+    }else if(neg){
+        cout << v[0] << " " << v[0] << endl;
+    }else cout << -1 << endl;
 }
 
 
 int main()
 {
     fast();
-    int t=1;
+    int t; cin >> t;
     while (t--) {
         solve();
     }
